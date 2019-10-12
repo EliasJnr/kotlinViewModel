@@ -22,8 +22,8 @@ class SignUpAccessFragment : Fragment() {
         super.onStart()
         signUpViewModel = ViewModelProviders.of(activity!!).get(SignUpViewModel::class.java)
 
-        et_email.setText(signUpViewModel.user?.email)
-        et_password.setText(signUpViewModel.user?.password)
+        et_email.setText(signUpViewModel.user.email)
+        et_password.setText(signUpViewModel.user.password)
     }
 
     override fun onCreateView(

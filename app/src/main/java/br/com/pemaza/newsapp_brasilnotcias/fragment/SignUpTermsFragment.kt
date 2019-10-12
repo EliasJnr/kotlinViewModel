@@ -27,7 +27,7 @@ class SignUpTermsFragment : Fragment(), CompoundButton.OnCheckedChangeListener,
 
         cb_terms.setOnCheckedChangeListener(this)
         bt_send.setOnClickListener(this)
-        onCheckedChanged(null, signUpViewModel.user?.statusTerms ?: false)
+        onCheckedChanged(null, signUpViewModel.user.statusTerms)
     }
 
     override fun onCreateView(
@@ -54,12 +54,12 @@ class SignUpTermsFragment : Fragment(), CompoundButton.OnCheckedChangeListener,
 
 
         val tvName = layout.findViewById<TextView>(R.id.tv_name)
-        tvName.text = signUpViewModel.user?.name
+        tvName.text = signUpViewModel.user.name
 
         val tvProfession = layout.findViewById<TextView>(R.id.tv_profession)
-        tvProfession.text = signUpViewModel.user?.profession
+        tvProfession.text = signUpViewModel.user.profession
 
-        val uriImg = Uri.parse(signUpViewModel.user?.imagePath)
+        val uriImg = Uri.parse(signUpViewModel.user.imagePath)
         val ivProfile = layout.findViewById<ImageView>(R.id.iv_profile)
         ivProfile.setImageURI(uriImg)
 

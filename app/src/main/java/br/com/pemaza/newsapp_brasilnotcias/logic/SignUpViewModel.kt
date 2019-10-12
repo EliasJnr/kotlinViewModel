@@ -5,11 +5,7 @@ import br.com.pemaza.newsapp_brasilnotcias.domain.User
 
 class SignUpViewModel : ViewModel() {
 
-    val user: User
-
-    init {
-        user = User()
-    }
+    val user: User = User()
 
     fun updatePersonalData(imagePath: String, name: String, profession: String) {
         user.imagePath = imagePath

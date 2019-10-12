@@ -55,9 +55,9 @@ class SignUpPersonalFragment : Fragment(), View.OnClickListener {
 
         iv_profile.setOnClickListener(this)
 
-        updatePhoto(signUpViewModel.user?.imagePath ?: "")
-        et_name.setText(signUpViewModel.user?.name)
-        et_profession?.setText(signUpViewModel.user?.profession)
+        updatePhoto(signUpViewModel.user.imagePath)
+        et_name.setText(signUpViewModel.user.name)
+        et_profession?.setText(signUpViewModel.user.profession)
     }
 
     override fun onPause() {
